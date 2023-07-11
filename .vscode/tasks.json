@@ -4,6 +4,7 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "npmwatch",
 			"type": "npm",
 			"script": "watch",
 			"problemMatcher": "$tsc-watch",
@@ -15,6 +16,16 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"label": "restartcomp",
+			"command": "${command:restart-computer.restartComputer}",
+			"args": ["audioCues.help"]
+		},
+		{
+			"label": "restartcomxp",
+			"command": "${command:workbench.action.tasks.runTask}",
+			"problemMatcher":[]
 		}
 	]
 }

@@ -1,21 +1,24 @@
 {
   "name": "restart-computer",
   "displayName": "Restart Computer",
-  "description": "Restart the computer from the comfort of VSCode, and pick up right where you left off.",
+  "description": "Restart your computer from the comfort of VSCode, and pick up right where you left off.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.80.0"
   },
+  "repository": {
+    "url": "https://github.com/limarkxx/restart-computer"
+  },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["onStartupFinished"],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "restart-computer.helloWorld",
-        "title": "Hello World"
+        "command": "restart-computer.restartComputer",
+        "title": "Restart Computer"
       }
     ]
   },
@@ -38,6 +41,7 @@
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
     "typescript": "^5.1.3",
-    "@vscode/test-electron": "^2.3.2"
+    "@vscode/test-electron": "^2.3.2",
+		"@vscode/vsce": "^2.19.0"
   }
 }
